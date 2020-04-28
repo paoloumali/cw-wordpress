@@ -1,4 +1,8 @@
 <?php
 
-shell_exec('cd /home/forge/sites/cloudways.paoloumali.com');
-shell_exec('git pull');
+shell_exec('cd ..');
+exec('./git-deployer.sh', $out);
+
+foreach ($out as $line) {
+    echo $line.PHP_EOL;
+}
