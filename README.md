@@ -1,13 +1,15 @@
 # cloudways.paoloumali.com
 
-## Hosting notes
+## Prod notes
 
-- nginx config is linked from /etc/nginx/sites-available/cloudways.paoloumali.com.nginx.conf to corresponding file in this repo.
+- Nginx config is linked from  
+.../sites-available/cloudways.paoloumali.com.nginx.conf  
+to the corresponding file at root of this repo.
 
 ## SSL
 
 - Add redirect in nginx config
-- force WP (http://cloudways.paoloumali.com/wp-admin/options-general.php) to use https updating nginx config to use SSL
+- Force [WP Settings](http://cloudways.paoloumali.com/wp-admin/options-general.php) to use https on all pages
   - WordPress Address (URL)
   - Site Address (URL)
 
@@ -26,3 +28,31 @@
       - git fetch origin
       - git stash
       - git pull
+
+## Local deployment
+
+Since future wordpress edits require a server,  
+let's introduce a common environment for devs to  
+use employing Vagrant
+
+.d script is used for short commands
+
+- Start server: $ ``d v up``
+- Halt server: $ ``d v halt``
+- SSH to server: $ ``d v ssh``
+- Destroy vm: $ ``d v destroy``
+- Snapshot create: $ ``d v snapshot push``
+- Restore latest pushed state: $ ``d v snapshot pop``
+
+### Runs
+
+Below lines will have future use for automation
+
+```bash
+./server/scripts/nginx-setup.sh
+./server/scripts/create-deployer.sh
+
+# GIT repo setup
+apt install git -y
+...
+```
