@@ -6,6 +6,11 @@
 .../sites-available/cloudways.paoloumali.com.nginx.conf  
 to the corresponding file at root of this repo.
 
+## Nginx and PHP notes
+
+- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx.conf
+- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/php-fpm.conf
+
 ## SSL
 
 - Add redirect in nginx config
