@@ -1,0 +1,3 @@
+[submodule "public/wp-content"]
+	path = public/wp-content
+	url = git@github.com:paoloumali/cw-wordpress-content.git
