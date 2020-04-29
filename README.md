@@ -9,6 +9,8 @@ to the corresponding file at root of this repo.
 ## Nginx and PHP notes
 
 - sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/nginx.conf
+- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/conf.d/caching.conf
+- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/snippets/wordpress.conf
 - sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/sites-available/cloudways.paoloumali.com.nginx.conf
 - sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/php/7.4/fpm/php-fpm.conf
 - sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/php/7.4/fpm/pool.d/www.conf
