@@ -28,6 +28,7 @@ backup_now () {
   # symlink to latest dir
   ln -sf $LATEST_DB $LN_LATEST_DB;
   ln -sf $LATEST_APP $LN_LATEST_APP;
+  echo Backup created: $LATEST_TIMED_DIR
 }
 
 backup_now;
@@ -41,6 +42,7 @@ create_restore_folder () {
   tar -xf $LN_LATEST_APP -C $RESTORE_DIR;
   mv $RESTORE_DIR$PUB_DIR $RESTORE_DIR/public;
   rm -rf $RESTORE_DIR/home;
+  echo Restore folder ready: $RESTORE_DIR
 }
 
 create_restore_folder;
