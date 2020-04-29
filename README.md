@@ -44,15 +44,10 @@ use employing Vagrant
 - Snapshot create: $ ``d v snapshot push``
 - Restore latest pushed state: $ ``d v snapshot pop``
 
-### Runs
+## Backups
 
-Below lines will have future use for automation
-
-```bash
-./server/scripts/nginx-setup.sh
-./server/scripts/create-deployer.sh
-
-# GIT repo setup
-apt install git -y
-...
-```
+Create cron task: ``30 16 * * * ${PROJ_DIR}/_backup-now.sh``
+When ${PROJ_DIR}/_backup-daily.sh runs:
+  - it creates a new timed dir in ${PROJ_DIR}/backups/bucket
+  - it creates /public and db symlinks in ${PROJ_DIR}/backups/latest
+  - preps a restore folder ${PROJ_DIR}/backups/restore
