@@ -29,7 +29,8 @@ define( 'DB_USER', 'username_here' );
 define( 'DB_PASSWORD', 'password_here' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+//define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', ':/var/run/mysqld/mysqld.sock' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
