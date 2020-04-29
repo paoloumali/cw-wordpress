@@ -10,6 +10,7 @@ to the corresponding file at root of this repo.
 
 - sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx.conf
 - sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/php-fpm.conf
+- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/pool.d/www.conf
 
 ## SSL
 
