@@ -8,12 +8,21 @@ to the corresponding file at root of this repo.
 
 ## Nginx and PHP notes
 
-- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/nginx.conf
-- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/conf.d/caching.conf
-- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/snippets/wordpress.conf
-- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/nginx/sites-available/cloudways.paoloumali.com.nginx.conf
-- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/php/7.4/fpm/php-fpm.conf
-- sudo ln -sf /home/forge/sites/cloudways.paoloumali.com/server/php/7.4/fpm/pool.d/www.conf
+```bash
+NGINX_CONF_HOME=/home/forge/sites/cloudways.paoloumali.com/server/nginx
+PHP_CONF_HOME=/home/forge/sites/cloudways.paoloumali.com/server/php
+
+sudo ln -sf $NGINX_CONF_HOME/nginx.conf
+sudo ln -sf $NGINX_CONF_HOME/conf.d/caching.conf
+sudo ln -sf $NGINX_CONF_HOME/snippets/wordpress.conf
+sudo ln -sf $NGINX_CONF_HOME/snippets/dont-log-favs-and-robs.conf
+sudo ln -sf $NGINX_CONF_HOME/sites-available/cloudways.paoloumali.com.nginx.conf
+sudo ln -sf $NGINX_CONF_HOME/sites-available/cw-backend.conf
+sudo ln -sf $NGINX_CONF_HOME/sites-available/cw-front.conf
+sudo ln -sf $NGINX_CONF_HOME/h5bp
+sudo ln -sf $PHP_CONF_HOME/7.4/fpm/php-fpm.conf
+sudo ln -sf $PHP_CONF_HOME/7.4/fpm/pool.d/www.conf
+```
 
 ## SSL
 
