@@ -3,7 +3,8 @@
 cd
 sudo adduser huenisys --gecos GECOS --disabled-password
 sudo usermod --password bY1fJ3ZGP4csI -g www-data huenisys
-sudo echo "umask 022" >> /home/huenisys/.bashrc
+echo "umask 022" | sudo tee -a /home/huenisys/.bashrc
+sudo mkdir /home/huenisys/sites
 sudo chown huenisys:www-data /home/huenisys/sites
 sudo chmod g+s /home/huenisys/sites
 
