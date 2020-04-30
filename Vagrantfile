@@ -31,7 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       end
   end
 
-
   config.vm.provider settings['provider'] do |vb|
     # free -m
     vb.memory = settings['memory']
@@ -41,10 +40,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # vb.customize = ["modifyvm", :id, "--vram", vram]
   end
 
-  config.vm.provision "shell", path: "server/scripts/nginx-setup.sh"
-  config.vm.provision "shell", path: "server/scripts/create-deployer.sh"
+  config.vm.provision "shell", path: "scripts/create-deployer.sh"
 
-  # config.vm.synced_folder "./", "/home/forge/sites/cloudways.paoloumali.com"
+  #config.vm.synced_folder "./", "/home/huenisys/sites/cloudways.paoloumali.com",
+  #  mount_options: ["dmode=775,fmode=777"]
+
+  config.vm.provision "shell", path: "scripts/php-setup.sh"
+  config.vm.provision "shell", path: "scripts/nginx-setup.sh"
+  config.vm.provision "shell", path: "scripts/mariadb-setup.sh"
+  config.vm.provision "shell", path: "scripts/after.sh"
+
+  # config.vm.synced_folder "./", "/home/huenisys/sites/cloudways.paoloumali.com"
 end
 
 puts "-------------------------------------------------"

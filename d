@@ -7,6 +7,5 @@ if [ $# -gt 0 ]; then
   elif [ "$1" == "v" ] || [ "$1" == "vagrant" ]; then
     shift;
     vagrant "$@"
-
   fi
 fi

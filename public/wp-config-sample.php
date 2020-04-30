@@ -18,8 +18,13 @@
  * @package WordPress
  */
 
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+    $_SERVER['HTTPS'] = 'on';
+    $_SERVER['SERVER_PORT'] = 443;
+}
+
 define('DISALLOW_FILE_EDIT', true);
-define('RT_WP_NGINX_HELPER_CACHE_PATH', '/home/forge/sites/cw-cache');
+# define('RT_WP_NGINX_HELPER_CACHE_PATH', '/home/forge/sites/cw-cache');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -82,11 +87,6 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
-
-if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-    $_SERVER['HTTPS'] = 'on';
-    $_SERVER['SERVER_PORT'] = 443;
-}
 
 /* That's all, stop editing! Happy publishing. */
 

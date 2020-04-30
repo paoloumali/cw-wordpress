@@ -9,8 +9,8 @@ to the corresponding file at root of this repo.
 ## Nginx and PHP notes
 
 ```bash
-NGINX_CONF_HOME=/home/forge/sites/cloudways.paoloumali.com/server/nginx
-PHP_CONF_HOME=/home/forge/sites/cloudways.paoloumali.com/server/php
+NGINX_CONF_HOME=/home/huenisys/sites/cloudways.paoloumali.com/server/nginx
+PHP_CONF_HOME=/home/huenisys/sites/cloudways.paoloumali.com/server/php
 
 sudo ln -sf $NGINX_CONF_HOME/nginx.conf
 sudo ln -sf $NGINX_CONF_HOME/conf.d/caching.conf
@@ -35,8 +35,8 @@ sudo ln -sf $PHP_CONF_HOME/7.4/fpm/pool.d/www.conf
 
 - Setup branch protection on master.
 - Git user in deployment dest
-  - git config --global user.email dev+forge@paoloumali.com
-  - git config --global user.name "Paolo Forge"
+  - git config --global user.email dev+huenisys@paoloumali.com
+  - git config --global user.name "Paolo Huenisys"
 - on pull
   - git pull
   - returned negative
