@@ -17,7 +17,6 @@
  *
  * @package WordPress
  */
-
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
     $_SERVER['HTTPS'] = 'on';
     $_SERVER['SERVER_PORT'] = 443;
@@ -37,7 +36,6 @@ define( 'DB_USER', 'username_here' );
 define( 'DB_PASSWORD', 'password_here' );
 
 /** MySQL hostname */
-//define( 'DB_HOST', 'localhost' );
 define( 'DB_HOST', ':/var/run/mysqld/mysqld.sock' );
 
 /** Database Charset to use in creating database tables. */
@@ -94,8 +92,6 @@ define( 'WP_DEBUG', false );
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
-
-define(‘DISALLOW_FILE_EDIT’, true);
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
