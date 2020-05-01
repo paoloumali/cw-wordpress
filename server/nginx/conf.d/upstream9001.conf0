@@ -1,0 +1,3 @@
+upstream wp_backend_9001 {
+    server 127.0.0.1:9001;
+}

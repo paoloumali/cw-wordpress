@@ -1,0 +1,38 @@
+#fastcgi_cache_path /home/huenisys/app1-nginx-cache1 levels=1:2 keys_zone=WORDPRESS:100m inactive=1m;
+#fastcgi_cache_key "$scheme$request_method$host$request_uri";
+
+server {
+	listen 9001;
+	listen [::]:9001;
+
+	root /home/huenisys/sites/app1/public;
+
+	server_name backend1;
+
+	include snippets/favicon-and-robot.conf;
+
+	include snippets/wordpress.conf;
+	#include snippets/skip-cache.conf;
+
+	index index.php index.html;
+
+	access_log  /var/log/nginx/app1-9001-access.log;
+	error_log  /var/log/nginx/app1-9001-error.log error;
+
+
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+
+	location ~ \.php$ {
+    	include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+
+    	#add_header X-WP-Cache $upstream_cache_status;
+		#fastcgi_cache_bypass $skip_cache;
+		#fastcgi_no_cache $skip_cache;
+		#fastcgi_cache WORDPRESS;
+		#fastcgi_cache_valid 1m;
+	}
+
+}
