@@ -17,6 +17,9 @@
  *
  * @package WordPress
  */
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'your_password' );
+
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
     $_SERVER['HTTPS'] = 'on';
     $_SERVER['SERVER_PORT'] = 443;
