@@ -1,11 +1,11 @@
-#fastcgi_cache_path /home/huenisys/app1-nginx-cache1 levels=1:2 keys_zone=WORDPRESS:100m inactive=1m;
+#fastcgi_cache_path /home/paoloumali/app1-nginx-cache1 levels=1:2 keys_zone=WORDPRESS:100m inactive=1m;
 #fastcgi_cache_key "$scheme$request_method$host$request_uri";
 
 server {
 	listen 9001;
 	listen [::]:9001;
 
-	root /home/huenisys/sites/app1/public;
+	root /home/paoloumali/sites/app1/public;
 
 	server_name backend1;
 

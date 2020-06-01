@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PROJ_DIR=/home/huenisys/sites/cloudways.paoloumali.com
+PROJ_DIR=/home/paoloumali/sites/cloudways.paoloumali.com
 FPM_CONF=/etc/php/7.4/fpm/php-fpm.conf
 POOL_WWW_CONF=/etc/php/7.4/fpm/pool.d/www.conf
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PROJ_DIR=/home/huenisys/sites/cloudways.paoloumali.com
+PROJ_DIR=/home/paoloumali/sites/cloudways.paoloumali.com
 NGINX_H=/etc/nginx
 NGINX_CONF=$NGINX_H/nginx.conf
 
